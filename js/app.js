@@ -17,6 +17,11 @@ function bindEvents() {
     els.endBtn.addEventListener('click', showStats);
     els.backBtn.addEventListener('click', resetQuiz);
     els.exitSubjectBtn.addEventListener('click', exitSubject);
+    els.answeredToggle.addEventListener('click', () => {
+        const collapsed = els.answeredPanel.classList.toggle('collapsed');
+        els.answeredToggle.setAttribute('aria-expanded', String(!collapsed));
+        els.answeredToggle.setAttribute('aria-label', collapsed ? '展开题目总览' : '收起题目总览');
+    });
     
     els.logo.addEventListener('click', (e) => {
         e.preventDefault();

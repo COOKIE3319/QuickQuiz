@@ -88,42 +88,66 @@
                 <!-- 题目进度和得分 -->
             </div>
 
-            <section class="card" id="question-card">
-                <div class="question-text" id="question-text">加载中...</div>
-                <div class="question-media" id="question-media"></div>
-                <ul class="options-list" id="options-list">
-                    <!-- 选项列表 -->
-                </ul>
-                <div class="feedback" id="feedback"></div>
-                <div class="actions">
-                    <button class="btn-primary" id="submit-btn" disabled>提交答案</button>
-                    <button class="btn-primary" id="next-btn" style="display: none;">下一题</button>
-                </div>
-                <div class="actions">
-                    <button class="btn-secondary" id="reset-btn">重置</button>
-                    <button class="btn-secondary" id="end-btn">结束测验</button>
-                </div>
-            </section>
+            <div class="quiz-layout">
+                <aside class="card answered-panel" id="answered-panel" aria-label="题目总览">
+                    <button class="answered-toggle" id="answered-toggle" type="button" aria-expanded="true" aria-controls="answered-list" aria-label="收起题目总览">
+                        <span class="answered-caret" aria-hidden="true">‹</span>
+                        <span class="answered-tab-text" aria-hidden="true">题目</span>
+                    </button>
+                    <div class="answered-header">
+                        <h2>题目总览</h2>
+                        <span class="answered-count" id="answered-count">0 / 0</span>
+                    </div>
+                    <div class="answered-legend" aria-hidden="true">
+                        <span><i class="legend-dot current"></i>当前</span>
+                        <span><i class="legend-dot correct"></i>正确</span>
+                        <span><i class="legend-dot wrong"></i>错误</span>
+                    </div>
+                    <div class="answered-list" id="answered-list">
+                        <p class="answered-empty">还没有题目</p>
+                    </div>
+                </aside>
 
-            <section class="card stats-card" id="stats-card">
-                <h2 style="margin-bottom: 20px;">测验结束</h2>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <div class="stat-value" id="accuracy">0%</div>
-                        <div class="stat-label">正确率</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-value" id="score-count">0 / 0</div>
-                        <div class="stat-label">正确数</div>
-                    </div>
+                <div class="quiz-main">
+                    <section class="card" id="question-card">
+                        <div class="question-text" id="question-text">加载中...</div>
+                        <div class="question-media" id="question-media"></div>
+                        <ul class="options-list" id="options-list">
+                            <!-- 选项列表 -->
+                        </ul>
+                        <div class="feedback" id="feedback"></div>
+                        <div class="actions">
+                            <button class="btn-primary" id="submit-btn" disabled>提交答案</button>
+                            <button class="btn-primary" id="next-btn" style="display: none;">下一题</button>
+                        </div>
+                        <div class="actions">
+                            <button class="btn-secondary" id="reset-btn">重置</button>
+                            <button class="btn-secondary" id="end-btn">结束测验</button>
+                        </div>
+                    </section>
+
+                    <section class="card stats-card" id="stats-card">
+                        <h2 style="margin-bottom: 20px;">测验结束</h2>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-value" id="accuracy">0%</div>
+                                <div class="stat-label">正确率</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="score-count">0 / 0</div>
+                                <div class="stat-label">正确数</div>
+                            </div>
+                        </div>
+                        <div class="wrong-list" id="wrong-list">
+                            <!-- 错题列表 -->
+                        </div>
+                        <div class="actions" style="margin-top: 30px;">
+                            <button class="btn-primary" id="back-btn">返回本科目</button>
+                        </div>
+                    </section>
                 </div>
-                <div class="wrong-list" id="wrong-list">
-                    <!-- 错题列表 -->
-                </div>
-                <div class="actions" style="margin-top: 30px;">
-                    <button class="btn-primary" id="back-btn">返回本科目</button>
-                </div>
-            </section>
+
+            </div>
         </section>
     </main>
 

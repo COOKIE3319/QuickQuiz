@@ -64,12 +64,16 @@ export function exitSubject() {
     STATE.selectedSubjectId = null;
     STATE.sets = [];
     STATE.questions = [];
+    STATE.questionGroups = [];
+    STATE.results = [];
+    clearAdvanceTimer();
     els.homeView.style.display = 'block';
     els.quizView.style.display = 'none';
     els.contributeView.style.display = 'none';
     els.quizControls.style.display = 'none';
     els.randomControls.style.display = 'none';
     els.exitSubjectBtn.style.display = 'none';
+    renderAnsweredList();
 }
 
 export function showContribute() {
@@ -80,15 +84,19 @@ export function showContribute() {
 function normalize(data, filename) {
     // data can be array of questions, { sets: [] }, or { id/name, questions }
     if (Array.isArray(data)) {
-        return [{ id: filename, name: filename, questions: validate(data) }];
+        return [{ id: filename, name: getDisplayFilename(filename), questions: validate(data) }];
     }
     if (data.sets && Array.isArray(data.sets)) {
-        return data.sets.map(s => ({ ...s, questions: validate(s.questions) }));
+        return data.sets.map(s => ({ ...s, name: s.name || getDisplayFilename(filename), questions: validate(s.questions) }));
     }
     if (data.questions && Array.isArray(data.questions)) {
-        return [{ id: data.id || filename, name: data.name || filename, questions: validate(data.questions) }];
+        return [{ id: data.id || filename, name: data.name || getDisplayFilename(filename), questions: validate(data.questions) }];
     }
     return [];
+}
+
+function getDisplayFilename(filename) {
+    return filename.split('/').pop();
 }
 
 function validate(questions) {
@@ -123,15 +131,30 @@ export function applySelection() {
     STATE.selectedSetId = setId;
     
     if (setId === 'all') {
-        STATE.questions = STATE.sets.flatMap(s => s.questions);
+        STATE.questions = [];
+        STATE.questionGroups = STATE.sets.map(set => {
+            const questionIndexes = set.questions.map(question => {
+                STATE.questions.push(question);
+                return STATE.questions.length - 1;
+            });
+
+            return { id: set.id, name: set.name, questionIndexes };
+        }).filter(group => group.questionIndexes.length > 0);
     } else {
-        STATE.questions = STATE.sets.find(s => s.id == setId)?.questions || [];
+        const selectedSet = STATE.sets.find(s => s.id == setId);
+        STATE.questions = selectedSet?.questions || [];
+        STATE.questionGroups = selectedSet ? [{
+            id: selectedSet.id,
+            name: selectedSet.name,
+            questionIndexes: STATE.questions.map((_, index) => index)
+        }] : [];
     }
 
     resetQuiz();
 }
 
 export function resetQuiz() {
+    clearAdvanceTimer();
     STATE.index = 0;
     STATE.score = 0;
     STATE.results = [];
@@ -142,23 +165,29 @@ export function resetQuiz() {
     
     els.statsCard.style.display = 'none';
     els.questionCard.style.display = 'block';
+    renderAnsweredList();
     renderQuestion();
 }
 
 export function renderQuestion() {
+    clearAdvanceTimer();
+
     if (STATE.questions.length === 0) {
         els.questionText.textContent = '当前题目集为空';
         els.optionsList.innerHTML = '';
         els.statusBar.textContent = '';
         els.submitBtn.disabled = true;
+        renderAnsweredList();
         return;
     }
 
     const qIndex = STATE.order[STATE.index];
     const q = STATE.questions[qIndex];
-    STATE.isAnswered = false;
+    const result = STATE.results.find(item => item.questionIndex === qIndex);
+    STATE.isAnswered = Boolean(result);
 
     els.statusBar.textContent = `题目 ${STATE.index + 1} / ${STATE.questions.length} | 得分: ${STATE.score}`;
+    renderAnsweredList();
     els.questionText.textContent = q.text;
     renderQuestionMedia(q);
     els.optionsList.innerHTML = '';
@@ -198,6 +227,34 @@ export function renderQuestion() {
         };
         els.optionsList.appendChild(li);
     });
+
+    if (result) {
+        restoreAnsweredQuestion(q, result);
+    }
+}
+
+function restoreAnsweredQuestion(question, result) {
+    const items = els.optionsList.querySelectorAll('.option-item');
+    items.forEach(item => {
+        const input = item.querySelector('input');
+        const key = input.value;
+        input.checked = result.userAnswer.includes(key);
+
+        if (input.checked) {
+            item.classList.add('selected');
+        }
+        if (question.answer.includes(key)) {
+            item.classList.add('correct');
+        } else if (result.userAnswer.includes(key)) {
+            item.classList.add('wrong');
+        }
+    });
+
+    els.submitBtn.disabled = true;
+    els.submitBtn.style.display = 'none';
+    els.nextBtn.style.display = STATE.index < STATE.questions.length - 1 ? 'block' : 'none';
+    els.feedback.textContent = result.correct ? '回答正确！' : `回答错误。正确答案是: ${question.answer.join(', ')}`;
+    els.feedback.className = `feedback ${result.correct ? 'correct' : 'wrong'}`;
 }
 
 // 图片支持
@@ -245,15 +302,20 @@ function renderQuestionMedia(question) {
 }
 
 export function checkAnswer() {
+    clearAdvanceTimer();
+
     const qIndex = STATE.order[STATE.index];
     const q = STATE.questions[qIndex];
+    if (STATE.results.some(item => item.questionIndex === qIndex)) return;
+
     const checked = Array.from(els.optionsList.querySelectorAll('input:checked')).map(i => i.value);
     
     const isCorrect = checked.length === q.answer.length && 
                       checked.sort().every((v, i) => v === q.answer.sort()[i]);
 
     STATE.isAnswered = true;
-    STATE.results.push({ questionId: q.id, correct: isCorrect, userAnswer: checked });
+    STATE.results.push({ questionId: q.id, questionIndex: qIndex, correct: isCorrect, userAnswer: checked });
+    renderAnsweredList();
 
     const items = els.optionsList.querySelectorAll('.option-item');
     items.forEach(item => {
@@ -269,7 +331,7 @@ export function checkAnswer() {
         STATE.score += q.score || 0;
         els.feedback.textContent = '回答正确！';
         els.feedback.className = 'feedback correct';
-        setTimeout(() => nextQuestion(), 700);
+        STATE.advanceTimer = setTimeout(() => nextQuestion(), 700);
     } else {
         els.feedback.textContent = `回答错误。正确答案是: ${q.answer.join(', ')}`;
         els.feedback.className = 'feedback wrong';
@@ -280,11 +342,82 @@ export function checkAnswer() {
     els.statusBar.textContent = `题目 ${STATE.index + 1} / ${STATE.questions.length} | 得分: ${STATE.score}`;
 }
 
+export function renderAnsweredList() {
+    if (!els.answeredList || !els.answeredCount) return;
+
+    els.answeredCount.textContent = `${STATE.results.length} / ${STATE.questions.length}`;
+    els.answeredList.innerHTML = '';
+
+    if (STATE.questions.length === 0) {
+        const empty = document.createElement('p');
+        empty.className = 'answered-empty';
+        empty.textContent = '还没有题目';
+        els.answeredList.appendChild(empty);
+        return;
+    }
+
+    STATE.questionGroups.forEach(group => {
+        const section = document.createElement('section');
+        section.className = 'answered-group';
+
+        const heading = document.createElement('h3');
+        heading.className = 'answered-group-title';
+        heading.textContent = group.name;
+
+        const grid = document.createElement('div');
+        grid.className = 'answered-grid';
+
+        group.questionIndexes.forEach((questionIndex, groupIndex) => {
+            const question = STATE.questions[questionIndex];
+            const orderIndex = STATE.order.indexOf(questionIndex);
+            const result = STATE.results.find(item => item.questionIndex === questionIndex);
+            const stateClass = result ? (result.correct ? 'correct' : 'wrong') : 'pending';
+            const item = document.createElement('button');
+            item.type = 'button';
+            item.className = `answered-item ${stateClass}`;
+            item.textContent = String(groupIndex + 1);
+            item.dataset.questionIndex = String(questionIndex);
+            item.title = `${group.name} 第 ${groupIndex + 1} 题：${question?.text || '题目已不可用'}${result ? `（${result.correct ? '正确' : '错误'}）` : ''}`;
+            item.setAttribute('aria-label', item.title);
+
+            if (orderIndex === STATE.index) {
+                item.classList.add('current');
+                item.setAttribute('aria-current', 'step');
+            }
+
+            item.addEventListener('click', () => jumpToQuestion(questionIndex));
+            grid.appendChild(item);
+        });
+
+        section.append(heading, grid);
+        els.answeredList.appendChild(section);
+    });
+}
+
+export function jumpToQuestion(questionIndex) {
+    const orderIndex = STATE.order.indexOf(questionIndex);
+    if (orderIndex === -1) return;
+
+    STATE.index = orderIndex;
+    els.statsCard.style.display = 'none';
+    els.questionCard.style.display = 'block';
+    renderQuestion();
+}
+
 export function nextQuestion() {
+    clearAdvanceTimer();
+
     STATE.index++;
     if (STATE.index >= STATE.questions.length) {
         import('./stats.js').then(m => m.showStats());
     } else {
         renderQuestion();
     }
+}
+
+function clearAdvanceTimer() {
+    if (!STATE.advanceTimer) return;
+
+    clearTimeout(STATE.advanceTimer);
+    STATE.advanceTimer = null;
 }
