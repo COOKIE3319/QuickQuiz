@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "type": "tf",
+    "text": "在对不带头结点的链队列作出队操作时，不会改变头指针的值。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "tf",
+    "text": "环形队列中有多少个元素可以根据队首指针和队尾指针的值来计算。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "text": "若采用“队首指针和队尾指针的值相等”作为环形队列为空的标志，则在设置一个空队时只需将队首指针和队尾指针赋同一个值，不管什么值都可以。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "text": "队列中允许插入的一端叫队头，允许删除的一端叫队尾。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "tf",
+    "text": "循环队列也存在空间溢出的问题。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "text": "队列是后进先出的线性表。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "tf",
+    "text": "Suppose that an array is used to store a circular queue, the value of front may be greater than the value of rear.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "text": "Suppose that an array is used to store a circular queue, the value of front must be less than or equal to the value of rear.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "tf",
+    "text": "队列适合解决处理顺序与输入顺序相反的问题。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "text": "队列适合解决处理顺序与输入顺序相同的问题。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "If a queue is implemented by a circularly linked list, then the insertion and deletion operations can be performed with one pointer rear instead of rear and front.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  }
+]

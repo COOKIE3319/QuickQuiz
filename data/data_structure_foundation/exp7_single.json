@@ -1,0 +1,294 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "在长度为n的（）上，删除第一个元素，其算法的时间复杂度为O(n)。",
+    "options": [
+      { "key": "A", "text": "只有表头指针的不带表头结点的循环单链表" },
+      { "key": "B", "text": "只有表尾指针的不带表头结点的循环单链表" },
+      { "key": "C", "text": "只有表尾指针的带表头结点的循环单链表" },
+      { "key": "D", "text": "只有表头指针的带表头结点的循环单链表" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "(neuDS)设长度为n的链队列采用单循环链表加以表示，若只设一个头指针指向队首元素，则入队操作的时间复杂度为（ ）。",
+    "options": [
+      { "key": "A", "text": "O(1)" },
+      { "key": "B", "text": "O(n)" },
+      { "key": "C", "text": "O(log2 n)" },
+      { "key": "D", "text": "O(n^2)" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "如图所示，现有编号为1到9的9列列车，驶入次序依次是8、4、2、5、3、9、1、6、7。若期望驶出的次序依次为1到9，则至少需要（ ）。",
+    "images": [
+      {
+        "src": "images/pta/exp7-q3.jpg",
+        "alt": "火车车轨示意图"
+      }
+    ],
+    "options": [
+      { "key": "A", "text": "2" },
+      { "key": "B", "text": "3" },
+      { "key": "C", "text": "4" },
+      { "key": "D", "text": "5" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "一循环队列Q，其存储空间的长度为20。若Q.front=12，Q.rear=3，则此时队列中的元素个数为（ ）。",
+    "options": [
+      { "key": "A", "text": "9" },
+      { "key": "B", "text": "10" },
+      { "key": "C", "text": "11" },
+      { "key": "D", "text": "12" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "循环队列放在一维数组A[0...M-1]中，end1指向队头元素，end2指向队尾元素的后一个位置。假设队列两端均可进行入队和出队操作，队列中最多能容纳M-1个元素。初始时为空。下列判断队空和队满的条件中，正确的是（ ）。",
+    "options": [
+      { "key": "A", "text": "队空：end1==end2; 队满：end1==(end2+1) mod M" },
+      { "key": "B", "text": "队空：end1==end2; 队满：end2==(end1+1) mod (M-1)" },
+      { "key": "C", "text": "队空：end2==(end1+1) mod M; 队满：end1==(end2+1) mod M" },
+      { "key": "D", "text": "队空：end1==(end2+1) mod M; 队满：end2==(end1+1) mod (M-1)" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "循环队列用数组A[0..m-1]存放其元素值，已知其头尾指针分别是front和rear，则当前队列的元素个数是（ ）。",
+    "options": [
+      { "key": "A", "text": "(rear-front+m)%m" },
+      { "key": "B", "text": "rear-front" },
+      { "key": "C", "text": "(rear-front+m+1)%m" },
+      { "key": "D", "text": "(rear-front+m-1)%m" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "对于循环队列，下列哪种说法是正确的（）。",
+    "options": [
+      { "key": "A", "text": "无法判断队列是否为空" },
+      { "key": "B", "text": "无法判断队列是否为满" },
+      { "key": "C", "text": "队列不可能满" },
+      { "key": "D", "text": "以上说法都不对" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "以下（ ）不是队列的基本运算？",
+    "options": [
+      { "key": "A", "text": "从队尾插入一个新元素" },
+      { "key": "B", "text": "从队列中删除第i个元素" },
+      { "key": "C", "text": "判断一个队列是否为空" },
+      { "key": "D", "text": "读取队头元素的值" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "栈和队列的共同点是( )",
+    "options": [
+      { "key": "A", "text": "都是先进后出" },
+      { "key": "B", "text": "都是后进先出" },
+      { "key": "C", "text": "只允许在端点处插入和删除元素" },
+      { "key": "D", "text": "没有共同点" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "设循环队列的存储空间为a[0..20]，且当前队头指针和队尾指针的值分别为8和3，则该队列中元素个数为( )",
+    "options": [
+      { "key": "A", "text": "5" },
+      { "key": "B", "text": "6" },
+      { "key": "C", "text": "16" },
+      { "key": "D", "text": "17" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "若用一个大小为6的数组来实现循环队列，且当前rear和front的值分别为0和3，当从队列中删除一个元素，再加入两个元素后，rear和front的值分别为( )",
+    "options": [
+      { "key": "A", "text": "1和5" },
+      { "key": "B", "text": "2和4" },
+      { "key": "C", "text": "4和2" },
+      { "key": "D", "text": "5和1" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "设依次进入循环队列的元素是1 2 3 4 5，则出队的序列是（ ）。",
+    "options": [
+      { "key": "A", "text": "1 2 3 4 5" },
+      { "key": "B", "text": "5 4 3 2 1" },
+      { "key": "C", "text": "4 5 3 2 1" },
+      { "key": "D", "text": "不确定" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "带头结点的链式队列（包含数据结点）的尾指针rear指向（ ）",
+    "options": [
+      { "key": "A", "text": "头结点" },
+      { "key": "B", "text": "队尾元素结点" },
+      { "key": "C", "text": "队头元素结点" },
+      { "key": "D", "text": "不确定" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "带头结点的链式队列的头指针front指向（ ）",
+    "options": [
+      { "key": "A", "text": "头结点" },
+      { "key": "B", "text": "尾结点" },
+      { "key": "C", "text": "队头元素结点" },
+      { "key": "D", "text": "不确定" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "若用大小为6的数组来实现循环队列，且当前front和rear的值分别为0和3。当从队列中删除两个元素，再加入三个元素后，front和rear的值分别为（ ）。",
+    "options": [
+      { "key": "A", "text": "2和0" },
+      { "key": "B", "text": "2和1" },
+      { "key": "C", "text": "2和2" },
+      { "key": "D", "text": "2和4" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "若用大小为6的数组来实现循环队列，且当前front和rear的值分别为1和4。当从队列中删除两个元素，再加入三个元素后，front和rear的值分别为（ ）。",
+    "options": [
+      { "key": "A", "text": "2和0" },
+      { "key": "B", "text": "3和1" },
+      { "key": "C", "text": "3和2" },
+      { "key": "D", "text": "3和0" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "设循环队列的元素存放在一维数组Q[0..19]中，队列非空时，front指示队头元素位置，rear指示队尾元素的后一个位置。如果队列中元素的个数为13，front的值为15，则rear的值是（ ）",
+    "options": [
+      { "key": "A", "text": "27" },
+      { "key": "B", "text": "28" },
+      { "key": "C", "text": "7" },
+      { "key": "D", "text": "8" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "循环队列顺序存储在数组A[1..50]中，队头front和队尾rear的初值为0。如当前rear的值为10，front的值为35，则队列中的元素个数为（ ）。",
+    "options": [
+      { "key": "A", "text": "45" },
+      { "key": "B", "text": "25" },
+      { "key": "C", "text": "10" },
+      { "key": "D", "text": "35" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "队列的插入在 ▁▁▁▁▁ 进行，删除在 ▁▁▁▁▁ 进行。",
+    "options": [
+      { "key": "A", "text": "队首、队首" },
+      { "key": "B", "text": "队尾、队尾" },
+      { "key": "C", "text": "队首、队尾" },
+      { "key": "D", "text": "队尾、队首" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "若用大小为6的数组A[0..5]来实现循环队列，当前队头front值为0，队尾rear的值为4。当从队列中删除2个元素，再插入2个元素后，front和rear的值为（ ）。",
+    "options": [
+      { "key": "A", "text": "2和4" },
+      { "key": "B", "text": "2和6" },
+      { "key": "C", "text": "2和2" },
+      { "key": "D", "text": "2和0" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "If a queue is implemented by a circular array of size 10, and the queue empty condition is front==rear. When front==3, and rear==1, how many elements are there in the queue?",
+    "options": [
+      { "key": "A", "text": "uncertain" },
+      { "key": "B", "text": "2" },
+      { "key": "C", "text": "8" },
+      { "key": "D", "text": "9" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 22,
+    "type": "single",
+    "text": "If a queue is implemented by a circular array of size 10, and the initial state of the queue is empty where front==rear. When front==3, and rear==1, which statement is possibly correct?",
+    "options": [
+      { "key": "A", "text": "5 elements are inserted and 2 elements are deleted" },
+      { "key": "B", "text": "5 elements are inserted and 3 elements are deleted" },
+      { "key": "C", "text": "10 elements are inserted and 1 element is deleted" },
+      { "key": "D", "text": "10 elements are inserted and 2 elements are deleted" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  }
+]

@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "type": "tf",
+    "text": "If keys are pushed onto a stack in the order {1, 2, 3, 4, 5}, then it is impossible to obtain the output sequence {3, 4, 1, 2, 5}.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "tf",
+    "text": "栈的链式实现，适宜采用类似单链表的结构，并以链表头作为栈顶。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "text": "栈的链式实现，适宜采用类似单链表的结构，并以链表尾作为栈顶。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "text": "If keys are pushed onto a stack in the order abcde, then it's impossible to obtain the output sequence cedab.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "tf",
+    "text": "通过对堆栈S操作：Push(S,1), Push(S,2), Pop(S), Push(S,3), Pop(S), Pop(S)。输出的序列为：123。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "text": "若一个栈的输入序列为1，2，3，…，N，输出序列的第一个元素是i，则第j个输出元素是j-i-1。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "tf",
+    "text": "序列{1,2,3,4,5}依次入栈，则不可能得到{3,4,1,2,5}的出栈序列。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "text": "Non recursive programs are generally faster than equivalent recursive programs. However, recursive programs are in general much simpler and easier to understand.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "tf",
+    "text": "Recursive programs are generally faster than equivalent non recursive programs. However, non recursive programs are in general much simpler and easier to understand.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "text": "When n elements are pushed into a stack, they may be popped in a different order. But if they are inserted into a queue, they will always be deleted in the same order as the insertions.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "只要确定了入栈顺序，则出栈顺序即可确定。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  }
+]

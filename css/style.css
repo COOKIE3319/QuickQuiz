@@ -146,6 +146,26 @@ nav {
     margin-bottom: 20px;
 }
 
+/* 图片支持 */
+.question-media {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.question-media.has-media {
+    display: grid;
+    gap: 12px;
+}
+
+.question-media img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg-accent);
+}
+
 .options-list {
     list-style: none;
     display: grid;

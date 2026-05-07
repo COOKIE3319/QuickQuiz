@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "type": "tf",
+    "text": "用渐进表示法分析算法复杂度的增长趋势。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "tf",
+    "text": "To judge an odd integer N (>10) is prime or not, we need to check if it is divisible by any odd number from 3 to sqrt(N). The time complexity of this algorithm is O(0.5logN).",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "text": "算法最坏情况下的时间复杂度是指算法求解输入规模为 n 的问题实例所需的最多基本运算次数。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "text": "Time complexity is machine or compiler-dependent.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "tf",
+    "text": "Given two algorithms A1 and A2, with time complexities being T1=O(n^2) and T2=O(nlogn), respectively. Then A2 must be faster than A1.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "text": "For sufficiently large N, log(N^2) grows faster than sqrt(N).",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "tf",
+    "text": "Supposed that the time complexity of the function B(n) is O(1). Then the time complexity of the following program is O(logn). for (i=1; i<=n; i=i*2) B(n);",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "text": "Supposed that the time complexity of function B(n) is Theta(n). Then the time complexity of the following program is Theta(n^2). for(i=n; i>0; i=i/2) B(n);",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "tf",
+    "text": "在长度为 N 的顺序表中查找第 k 个元素，平均时间复杂度是 O(N)。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "text": "在长度为 N 的顺序表中查找最大元素，平均时间复杂度是 O(N)。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "两段C语言代码P1和P2的时间复杂度分别为 O(N^2) 和 O(2^N)，则在完全相同的硬件配置与编译、运行环境下正常执行这两段代码，P1一定比P2快。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 12,
+    "type": "tf",
+    "text": "两段C语言代码P1和P2的时间复杂度分别为 O(N^2) 和 O(2^N)，则在完全相同的硬件配置与编译、运行环境下正常执行这两段代码，P1不一定比P2快。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 13,
+    "type": "tf",
+    "text": "算法的时间复杂度指的是算法所需时间随问题规模增长的增长率。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 14,
+    "type": "tf",
+    "text": "度量算法的时间复杂度可以通过分析算法的基本操作执行次数来实现。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 15,
+    "type": "tf",
+    "text": "多项式时间算法指的是算法的时间复杂度是多项式级别的，可以表示为一个多项式函数，即 O(n^k), k>=0。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 16,
+    "type": "tf",
+    "text": "指数时间算法指的是算法的时间复杂度是指数级别的，可以表示为一个指数函数，即 O(k^n), k>=1。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  }
+]

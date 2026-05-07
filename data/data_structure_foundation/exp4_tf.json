@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "type": "tf",
+    "text": "线性表采用链式存储表示时，所有结点之间的存储单元地址可以连续也可以不连续。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "tf",
+    "text": "将N个数据按照从小到大顺序组织存放在一个单向链表中。如果采用二分查找，那么查找的平均时间复杂度是O(logN)。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "text": "顺序存储方式插入和删除时效率太低，因此它不如链式存储方式好。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "text": "在单链表中，要访问某个结点，只要知道该结点的指针即可。因此，单链表是一种随机存取结构。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "tf",
+    "text": "链式存储的优点是插入、删除元素时不会引起后续元素的移动，缺点是只能顺序访问各元素。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "text": "在具有N个结点的单链表中，访问结点和增加结点的时间复杂度分别对应为O(1)和O(N)。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "tf",
+    "text": "If N numbers are stored in a singly linked list in increasing order, then the average time complexity for binary search is O(logN).",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "text": "在具有头结点的链式存储结构中，头指针指向链表中的第一个元素结点。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "tf",
+    "text": "带头结点的单循环链表中，任一结点的后继结点的指针域均不空。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "text": "链表中逻辑上相邻的元素，其物理位置也一定相邻。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "链表是一种随机存取的存储结构。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 12,
+    "type": "tf",
+    "text": "链表是采用链式存储结构的线性表,进行插入、删除操作时，在链表中比在顺序存储结构中效率高。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 13,
+    "type": "tf",
+    "text": "线性表采用链式存储结构时，各个数据元素的存储单元地址一定是不连续的。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 14,
+    "type": "tf",
+    "text": "对单链表来说，只有从头结点开始才能访问到表中所有结点。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  }
+]

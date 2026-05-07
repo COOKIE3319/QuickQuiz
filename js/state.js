@@ -26,6 +26,7 @@ export const els = {
     questionCard: document.getElementById('question-card'),
     statsCard: document.getElementById('stats-card'),
     questionText: document.getElementById('question-text'),
+    questionMedia: document.getElementById('question-media'),
     optionsList: document.getElementById('options-list'),
     statusBar: document.getElementById('status-bar'),
     feedback: document.getElementById('feedback'),

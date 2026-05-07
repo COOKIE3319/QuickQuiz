@@ -1,0 +1,281 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "线性表若采用链式存储结构时，要求内存中可用存储单元的地址（）。",
+    "options": [
+      { "key": "A", "text": "必须是连续的" },
+      { "key": "B", "text": "部分地址必须是连续的" },
+      { "key": "C", "text": "一定是不连续的" },
+      { "key": "D", "text": "连续或不连续都可以" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "对线性表，在下列情况下应当采用链表表示的是（）。",
+    "options": [
+      { "key": "A", "text": "经常需要随机地存取元素" },
+      { "key": "B", "text": "经常需要进行插入和删除操作" },
+      { "key": "C", "text": "表中元素需要占据一片连续的存储空间" },
+      { "key": "D", "text": "表中的元素个数不变" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "在单链表中，要删除某一指定结点，必须先找到该结点的（）。",
+    "options": [
+      { "key": "A", "text": "直接前驱" },
+      { "key": "B", "text": "自身位置" },
+      { "key": "C", "text": "直接后继" },
+      { "key": "D", "text": "直接后继的后继" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "在单链表中，指针p指向元素为x的结点，实现“删除x的后继”的语句是（）。",
+    "options": [
+      { "key": "A", "text": "p=p->next" },
+      { "key": "B", "text": "p->next=p->next->next" },
+      { "key": "C", "text": "p->next=p" },
+      { "key": "D", "text": "p=p->next->next" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "已知线性表中的元素以值递增有序排列，程序fun4的功能是（）。",
+    "options": [
+      { "key": "A", "text": "删除单链表中所有值小于min或大于max的元素" },
+      { "key": "B", "text": "将单链表中值大于min的元素删除" },
+      { "key": "C", "text": "将单链表中值小于max的元素删除" },
+      { "key": "D", "text": "删除单链表中所有值大于min且小于max的元素" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "已知单链表中的元素以值递增有序排列，删除单链表中所有值相同元素算法中的空缺语句应为（）。",
+    "options": [
+      { "key": "A", "text": "p->next=q->next; delete q;" },
+      { "key": "B", "text": "q->next=p->next; delete q; q=p->next;" },
+      { "key": "C", "text": "p->next=q->next; delete q; q=p->next;" },
+      { "key": "D", "text": "p->next=q->next; delete q; q=p;" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "struct node { int val; struct node *next; } p[3] = { 4, &p[2], 6, &p[0], 5, &p[1] }; 其中值为6的表达式是：",
+    "options": [
+      { "key": "A", "text": "p[1].next->val" },
+      { "key": "B", "text": "(&p[0])->next->val" },
+      { "key": "C", "text": "p[2].val" },
+      { "key": "D", "text": "p[2].next->val" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "对于单链表存储结构，以下说法中错误的是( )",
+    "options": [
+      { "key": "A", "text": "一个节点的数据域用于存放线性表的一个数据元素" },
+      { "key": "B", "text": "一个节点的指针域用于指向下一个数据元素的节点" },
+      { "key": "C", "text": "单链表必须带有头节点" },
+      { "key": "D", "text": "单链表中所有节点可以连续也可以不连续存放" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "在一个长度为n（n>1）的带头节点的单链表head上，另设有尾指针r（指向尾节点），执行( )操作与链表的长度有关。",
+    "options": [
+      { "key": "A", "text": "删除单链表中的第一个元素" },
+      { "key": "B", "text": "删除单链表中的尾节点" },
+      { "key": "C", "text": "在单链表第一个元素前插入一个新节点" },
+      { "key": "D", "text": "在单链表最后一个元素后插入一个新节点" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "假设某个带头结点的单链表的头指针为head，则判定该表为空表的条件是（ ）",
+    "options": [
+      { "key": "A", "text": "head==NULL" },
+      { "key": "B", "text": "head->next==NULL" },
+      { "key": "C", "text": "head!=NULL" },
+      { "key": "D", "text": "head->next==head" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "在不带头结点的单链表中，某个结点的指针域指向该结点的（ ）",
+    "options": [
+      { "key": "A", "text": "直接前趋" },
+      { "key": "B", "text": "直接后继" },
+      { "key": "C", "text": "开始结点" },
+      { "key": "D", "text": "尾端结点" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "线性表L在（ ）情况下适用于使用链式结构实现",
+    "options": [
+      { "key": "A", "text": "需不断对L进行删除插入" },
+      { "key": "B", "text": "需经常修改L中的结点值" },
+      { "key": "C", "text": "L中含有大量的结点" },
+      { "key": "D", "text": "L中含有少量的结点" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "单链表的结点指针域为next，其头结点由指针head指向，则删除第一个数据结点（由指针p指向）的语句序列为（ ）",
+    "options": [
+      { "key": "A", "text": "p->next = head->next;" },
+      { "key": "B", "text": "head->next = p;" },
+      { "key": "C", "text": "p = head->next;" },
+      { "key": "D", "text": "head->next = p->next;" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "用链表表示线性表的优点是",
+    "options": [
+      { "key": "A", "text": "便于随机存取" },
+      { "key": "B", "text": "花费的存储空间比顺序表少" },
+      { "key": "C", "text": "便于插入与删除" },
+      { "key": "D", "text": "数据元素的物理顺序与逻辑顺序相同" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "在包含n个数据元素的单链表中，哪项操作的时间复杂度不为O(n)？",
+    "options": [
+      { "key": "A", "text": "访问第i个数据元素" },
+      { "key": "B", "text": "在位序i处插入一个新结点" },
+      { "key": "C", "text": "删除位序i处的结点" },
+      { "key": "D", "text": "将n个元素按升序排序" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "单链表是线性表的 ( )。",
+    "options": [
+      { "key": "A", "text": "链式存储结构" },
+      { "key": "B", "text": "顺序存储结构" },
+      { "key": "C", "text": "散列存储结构" },
+      { "key": "D", "text": "索引存储结构" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "在单链表中，删除指针为p的结点的后继元素s，正确的操作是：( )。",
+    "options": [
+      { "key": "A", "text": "p=p->next;" },
+      { "key": "B", "text": "s=p->next; p->next=s->next;" },
+      { "key": "C", "text": "p->next=s; p->next=s->next;" },
+      { "key": "D", "text": "p->next=s->next; p->next=s;" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "将如图所示的单向链表中A段和B段交换位置（将B段调到A段的前面，其余结点次序不变），正确的程序段是",
+    "images": [
+      {
+        "src": "images/pta/exp4-q18.png",
+        "alt": "题目示意图"
+      }
+    ],
+    "options": [
+      { "key": "A", "text": "t=q->next; q->next=r->next; r->next=p->next; p->next=t;" },
+      { "key": "B", "text": "t=q->next; q->next=r->next; r->next=q; p->next=t;" },
+      { "key": "C", "text": "p->next=q->next; q->next=r->next; r->next=p->next;" },
+      { "key": "D", "text": "q->next=r->next; r->next=p->next; p->next=q->next;" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 19,
+    "type": "single",
+    "text": "已知h是指向单向加头链表的首指针，p指向一个新结点，删除表头结点的操作是。",
+    "options": [
+      { "key": "A", "text": "p=h, h=p->next; free(p);" },
+      { "key": "B", "text": "p=h->next; free(p); h=h->next;" },
+      { "key": "C", "text": "p=h->next, h->next=p->next; free(p);" },
+      { "key": "D", "text": "free(h->next); h=h->next;" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 20,
+    "type": "single",
+    "text": "有如下程序段：p=new snode; p->data=350; p->next=NULL; q=new snode; q->data=450; q->next=NULL; *p=*q; 那么，p->data和q->data的值分别为：",
+    "options": [
+      { "key": "A", "text": "350,350" },
+      { "key": "B", "text": "450,450" },
+      { "key": "C", "text": "350,450" },
+      { "key": "D", "text": "450,350" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 21,
+    "type": "single",
+    "text": "Given a singly linked non-empty list L with a dummy header, executing q=p->next; p->next=q->next; q->next=h->next; h->next=q; must result in",
+    "options": [
+      { "key": "A", "text": "the node pointed by q is inserted after the node pointed by p" },
+      { "key": "B", "text": "the node pointed by p is inserted after the node pointed by q" },
+      { "key": "C", "text": "the node pointed by p is moved after the dummy header of L" },
+      { "key": "D", "text": "the node pointed by q is moved after the dummy header of L" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  }
+]

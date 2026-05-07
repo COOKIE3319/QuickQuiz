@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "type": "tf",
+    "text": "若某线性表最常用的操作是存取任一指定序号的元素和在最后进行插入和删除运算，则利用顺序表存储最节省时间。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "tf",
+    "text": "For a sequentially stored linear list of length N, the time complexities for query and insertion are O(1) and O(N), respectively.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "text": "(neuDS)顺序存储的线性表不支持随机存取。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "text": "(neuDS)在顺序表上进行插入、删除操作时需要移动元素的个数与待插入或待删除元素的位置无关。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "tf",
+    "text": "在线性表的顺序存储结构中，插入和删除元素时，移动元素的个数与该元素的位置有关。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "text": "顺序存储方式只能用于存储线性结构。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "tf",
+    "text": "顺序存储的线性表可以随机存取。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "tf",
+    "text": "If a linear list is represented by a 1-dimensional array, the addresses of the elements in the memory must be consecutive.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "tf",
+    "text": "顺序存储方式插入和删除时效率太低，因此它不如链式存储方式好。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "tf",
+    "text": "在N个结点的顺序表中访问第i（1<=i<=N）个结点和求第i（2<=i<=N）个结点直接前驱的算法时间复杂度均为O(1)。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "tf",
+    "text": "For a sequentially stored linear list of length N, the time complexities for random query and inserting the first element are O(N) and O(1), respectively.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 12,
+    "type": "tf",
+    "text": "The time comlexity of Selection Sort will be the same no matter we store the elements in an array or a linked list.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 13,
+    "type": "tf",
+    "text": "线性表存储于A[1..50]中，删除第30个元素，需要移动20个元素。（ ）",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 14,
+    "type": "tf",
+    "text": "在长度为N的顺序表中查找最大元素，平均时间复杂度是 O(N)。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  }
+]

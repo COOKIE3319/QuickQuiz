@@ -1,0 +1,139 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "下面的这个循环的循环次数是（ ）。\nfor(int i=0,j=10; i=j=10; i++,j--)",
+    "options": [
+      { "key": "A", "text": "语法错误，不能执行" },
+      { "key": "B", "text": "无限次" },
+      { "key": "C", "text": "10" },
+      { "key": "D", "text": "1" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "有如下程序段：\nchar p[] = \"ZUCC DS 2018\";\nchar *q = p;\nchar *m =(char *)((int *)q + 1);\nprintf(\"%s\", ++m);\n输出结果是",
+    "options": [
+      { "key": "A", "text": "DS 2018" },
+      { "key": "B", "text": "ZUCC DS 2018" },
+      { "key": "C", "text": "CC DS 2018" },
+      { "key": "D", "text": "UCC DS 2018" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "若p1、p2都是整型指针，p1已经指向变量x，要使p2也指向x, ____是正确的。",
+    "options": [
+      { "key": "A", "text": "p2=p1" },
+      { "key": "B", "text": "p2=**p1" },
+      { "key": "C", "text": "p2=&p1" },
+      { "key": "D", "text": "p2=*p1" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "一个递归算法必须包括（ ）。",
+    "options": [
+      { "key": "A", "text": "递归部分" },
+      { "key": "B", "text": "终止条件和递归部分" },
+      { "key": "C", "text": "迭代部分" },
+      { "key": "D", "text": "终止条件和迭代部分" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "若有以下说明，且0<=i<10，则对数组元素的错误引用是（）。\nint a[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, *p = a, i;",
+    "options": [
+      { "key": "A", "text": "*(a+i)" },
+      { "key": "B", "text": "a[p-a+i]" },
+      { "key": "C", "text": "p+i" },
+      { "key": "D", "text": "*(&a[i])" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "执行下面程序，正确的输出是（）。\nint x = 5, y = 7;\nvoid swap ( )\n{\nint z ;\nz = x ; x = y ; y = z ;\n}\nint main(void)\n{\nint x = 3, y = 8;\nswap ( ) ;\nprintf (\"%d,%d \\\n\", x , y ) ;\nreturn 0 ;\n}",
+    "options": [
+      { "key": "A", "text": "3,8" },
+      { "key": "B", "text": "8,3" },
+      { "key": "C", "text": "5,7" },
+      { "key": "D", "text": "7,5" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "有以下定义：char x[] = \"abcdefg\"; char y[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g'}; 则正确的叙述为（）。",
+    "options": [
+      { "key": "A", "text": "数组x和数组y等价" },
+      { "key": "B", "text": "数组x和数组y的长度相同" },
+      { "key": "C", "text": "数组x的长度大于数组y的长度" },
+      { "key": "D", "text": "数组x的长度小于数组y的长度" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "执行以下代码，输出的结果是：\n#include <stdio.h>\nvoid swap(int *x, int *y){\nint *z;\nz=x; x=y; y=z;\n}\nint main(){\nint x=3, y=8;\nswap(&x, &y);\nprintf(\"%d, %d\\n\", x, y);\nreturn 0;\n}",
+    "options": [
+      { "key": "A", "text": "3, 8" },
+      { "key": "B", "text": "8, 3" },
+      { "key": "C", "text": "输出结果不确定，有多种可能。" },
+      { "key": "D", "text": "程序有错，不能运行。" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "执行以下代码，输出的结果是：\n#include <stdio.h>\nvoid hoho(int *k){\n*k = 3;\n}\nvoid hehe(int k){\nk += 1;\n}\nint main(){\nint k=1;\nhoho(&k);\nhehe(k);\nprintf(\"%d\", k);\nreturn 0;\n}",
+    "options": [
+      { "key": "A", "text": "1" },
+      { "key": "B", "text": "2" },
+      { "key": "C", "text": "3" },
+      { "key": "D", "text": "4" },
+      { "key": "E", "text": "5" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "执行以下代码，输出的结果是：\n#include <stdio.h>\nint *func(int a[], int n, int k){\nif(k<0 || k>=n) return NULL;\nreturn &a[k];\n}\nint main(){\nint a[5] = {9, 7, 5, 3, 1};\n*func(a, 5, 2) = 0;\nprintf(\"%d\", a[1] + a[2] + a[3]);\nreturn 0;\n}",
+    "options": [
+      { "key": "A", "text": "21" },
+      { "key": "B", "text": "15" },
+      { "key": "C", "text": "9" },
+      { "key": "D", "text": "14" },
+      { "key": "E", "text": "16" },
+      { "key": "F", "text": "10" },
+      { "key": "G", "text": "12" },
+      { "key": "H", "text": "8" },
+      { "key": "I", "text": "若程序运行输出结果不是其他任何一项，则选此项" },
+      { "key": "J", "text": "若程序有错不能运行，则选此项" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  }
+]
