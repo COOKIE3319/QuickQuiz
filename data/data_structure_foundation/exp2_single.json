@@ -1,0 +1,233 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "下面的程序段违反了算法的（）原则。\nvoid sam()\n{ int n=2;\nwhile (n%2==0) n+=2;\nprintf(\"%d\",n);\n}",
+    "options": [
+      { "key": "A", "text": "有穷性" },
+      { "key": "B", "text": "确定性" },
+      { "key": "C", "text": "可行性" },
+      { "key": "D", "text": "健壮性" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "算法：下列程序段的时间复杂度是\ncount=0;\nfor(k=1;k<=n;k*=2)\nfor(j=1;j<=n;j++)\ncount++;",
+    "options": [
+      { "key": "A", "text": "O(log2 n)" },
+      { "key": "B", "text": "O(n)" },
+      { "key": "C", "text": "O(nlog2 n)" },
+      { "key": "D", "text": "O(n^2)" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "算法：下列函数时间复杂度是\nint func(int n) {\n  int i = 0, sum = 0;\n  while(sum < n) sum += ++i;\n  return i;\n}",
+    "options": [
+      { "key": "A", "text": "O(logn)" },
+      { "key": "B", "text": "O(sqrt(n))" },
+      { "key": "C", "text": "O(n)" },
+      { "key": "D", "text": "O(nlogn)" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "算法：设n是描述问题规模的非负整数，下列函数时间复杂度是\nx = 0;\nwhile( n >= (x + 1) * (x + 1))\n  x = x + 1;",
+    "options": [
+      { "key": "A", "text": "O(logn)" },
+      { "key": "B", "text": "O(sqrt(n))" },
+      { "key": "C", "text": "O(n)" },
+      { "key": "D", "text": "O(n^2)" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "算法：下列程序段的时间复杂度是\nint sum = 0;\nfor(int i = 1;i < n;i *= 2)\nfor(int j = 0; j < i; j++)\nsum++;",
+    "options": [
+      { "key": "A", "text": "O(logn)" },
+      { "key": "B", "text": "O(n)" },
+      { "key": "C", "text": "O(nlogn)" },
+      { "key": "D", "text": "O(n^2)" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "某程序的时间复杂度为 (3n + nlog2n + n^2 + 8), 其数量级表示为( )。",
+    "options": [
+      { "key": "A", "text": "O(n)" },
+      { "key": "B", "text": "O(nlog2n)" },
+      { "key": "C", "text": "O(n^2)" },
+      { "key": "D", "text": "O(log2n)" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "下列代码的时间复杂度是：\nif(k > 0){\n  for(i=1; i<N; i++)\n    for(j=N; j>1; j/=2)\n      k += i + j;\n}else{\n  for(i=1; i<N*2; i++)\n    for(j=1; j<100; j++)\n      k -= i + j;\n}",
+    "options": [
+      { "key": "A", "text": "O(N)" },
+      { "key": "B", "text": "O(NlogN)" },
+      { "key": "C", "text": "O(N^2)" },
+      { "key": "D", "text": "O(N^3)" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "下列代码的时间复杂度是：\nif(k > 0){\n  for(i=1; i<N; i++)\n    for(j=1; j<N; j*=2)\n      k += i + j;\n}else{\n  for(i=1; i<N*N; i++)\n    for(j=1; j<1000; j++)\n      k -= i + j;\n}",
+    "options": [
+      { "key": "A", "text": "O(N)" },
+      { "key": "B", "text": "O(NlogN)" },
+      { "key": "C", "text": "O(N^2)" },
+      { "key": "D", "text": "O(N^3)" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "What is the time complexity of the following code\nint s = 0;\nfor (int i = 1; i <= n; i++) {\n  for (int j = 1; j <= i; j++) {\n    s += j;\n  }\n}",
+    "options": [
+      { "key": "A", "text": "O(n)" },
+      { "key": "B", "text": "O(n^2)" },
+      { "key": "C", "text": "O(nlogn)" },
+      { "key": "D", "text": "O(n^3)" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "The time complexity of the following function is:\ndouble f( int n ) {\n  if (n <= 1) return 2.0;\n  else return f(n - 1) / 2.0;\n}",
+    "options": [
+      { "key": "A", "text": "O(nlogn)" },
+      { "key": "B", "text": "O(n)" },
+      { "key": "C", "text": "O(n^2)" },
+      { "key": "D", "text": "O(logn)" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "算法：计算以下代码的时间复杂度\nint count =0;\nfor(int i=0; i*i<n; i++)\nfor(int j=0; j<i; j++)\ncount++;",
+    "options": [
+      { "key": "A", "text": "O(logn)" },
+      { "key": "B", "text": "O(n)" },
+      { "key": "C", "text": "O(nlogn)" },
+      { "key": "D", "text": "O(n^2)" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "一个完整的算法应该具有（ ）等特性。",
+    "options": [
+      { "key": "A", "text": "可执行性、可修改性和可维护性" },
+      { "key": "B", "text": "可行性、确定性和有穷性" },
+      { "key": "C", "text": "确定性、有穷性和可靠性" },
+      { "key": "D", "text": "正确性、可读性和有效性" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "给定 N×N×N 的三维数组A，则在不改变数组的前提下，查找最小元素的时间复杂度是：",
+    "options": [
+      { "key": "A", "text": "O(N^2)" },
+      { "key": "B", "text": "O(NlogN)" },
+      { "key": "C", "text": "O(N^2logN)" },
+      { "key": "D", "text": "O(N^3)" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "For the following piece of code\nfor(i=0; i<n; i++)\n  for(j=i; j>0; j/=2)\n    printf(\"%d\\n\", j);\nthe time complexity is:",
+    "options": [
+      { "key": "A", "text": "O(N*i)" },
+      { "key": "B", "text": "O(N)" },
+      { "key": "C", "text": "O(N^2)" },
+      { "key": "D", "text": "O(NlogN)" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "下列代码的时间复杂度是：\nfor(i=1; i<=N; i++){\n  sum += i;\n}\nfor(j=1; j<=M; j++){\n  for(k=1; k<=M; k += k){\n    sum += k;\n  }\n}",
+    "options": [
+      { "key": "A", "text": "O(N)" },
+      { "key": "B", "text": "O(Mlog2M)" },
+      { "key": "C", "text": "O(N + Mlog2M)" },
+      { "key": "D", "text": "O(Nlog2N)" },
+      { "key": "E", "text": "O(M^2)" },
+      { "key": "F", "text": "O(N^2 + M^2)" },
+      { "key": "G", "text": "O(N + M^2)" },
+      { "key": "H", "text": "O(N + N*M)" },
+      { "key": "I", "text": "O(N*Mlog2M)" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "下列代码的时间复杂度是：\nfor(i=M; i>0; i--){\n  sum += i;\n}\nfor(j=1; j<=N; j++){\n  for(k=N; k>=1; k /= 2){\n    sum += k;\n  }\n}",
+    "options": [
+      { "key": "A", "text": "O(M)" },
+      { "key": "B", "text": "O(Nlog2N)" },
+      { "key": "C", "text": "O(M + Nlog2N)" },
+      { "key": "D", "text": "O(Mlog2M)" },
+      { "key": "E", "text": "O(N^2)" },
+      { "key": "F", "text": "O(M^2 + N^2)" },
+      { "key": "G", "text": "O(M + N^2)" },
+      { "key": "H", "text": "O(M + M*N)" },
+      { "key": "I", "text": "O(M*Nlog2N)" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "算法：求整数n(n>=0)阶乘的算法如下，其时间复杂度是\nint fact(int n){\n  if(n<=1) return 1;\n  return n*fact(n-1);\n}",
+    "options": [
+      { "key": "A", "text": "O(log2n)" },
+      { "key": "B", "text": "O(n)" },
+      { "key": "C", "text": "O(nlog2n)" },
+      { "key": "D", "text": "O(n^2)" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  }
+]

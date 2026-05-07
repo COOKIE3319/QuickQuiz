@@ -1,0 +1,223 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "用数组表示线性表的优点是（）。",
+    "options": [
+      { "key": "A", "text": "便于插入和删除操作" },
+      { "key": "B", "text": "便于随机存取" },
+      { "key": "C", "text": "可以动态地分配存储空间" },
+      { "key": "D", "text": "不需要占用一片相邻的存储空间" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "在顺序结构表示的线性表中，删除第i个元素（数组下标为i-1)，需要把后面的所有元素都往前挪一位，相应的语句是：for (___________ ) PtrL->Data[j-1]=PtrL->Data[j]; 其中空缺部分的内容应该是",
+    "options": [
+      { "key": "A", "text": "j = i; j<= PtrL->Last; j++" },
+      { "key": "B", "text": "j = PtrL->Last; j>= i; j--" },
+      { "key": "C", "text": "j = i-1; j<= PtrL->Last; j++" },
+      { "key": "D", "text": "j = PtrL->Last; j>= i-1; j--" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "对长度为10的线性表进行冒泡排序，最坏情况下需要比较的次数为",
+    "options": [
+      { "key": "A", "text": "9" },
+      { "key": "B", "text": "10" },
+      { "key": "C", "text": "45" },
+      { "key": "D", "text": "90" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "一个线性表，最频繁的操作是在末尾插入元素和查找第k个元素，较少进行删除等其他操作。则该线性表最合适的实现方式是：",
+    "options": [
+      { "key": "A", "text": "数组（顺序表）" },
+      { "key": "B", "text": "单链表" },
+      { "key": "C", "text": "循环队列" },
+      { "key": "D", "text": "带有尾指针的单链表" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "一个线性表，最频繁的操作是插入首元素和删除值为x的元素，较少进行其他操作。则该线性表最合适的实现方式是：",
+    "options": [
+      { "key": "A", "text": "数组（顺序表）" },
+      { "key": "B", "text": "单链表" },
+      { "key": "C", "text": "栈" },
+      { "key": "D", "text": "循环队列" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "若某线性表最常用的操作是在表尾进行插入和删除，则利用哪种存储方式最合适？",
+    "options": [
+      { "key": "A", "text": "数组" },
+      { "key": "B", "text": "单链表" },
+      { "key": "C", "text": "双向链表" },
+      { "key": "D", "text": "广义表" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Among the following operations for a sorted sequential list (of length n), which one has the average time complexity of O(1)?",
+    "options": [
+      { "key": "A", "text": "Find the element with a given key value" },
+      { "key": "B", "text": "Insert the element with a given key value" },
+      { "key": "C", "text": "Delete the i-th (1<=i<=n) element" },
+      { "key": "D", "text": "Visit the i-th (1<=i<=n) element" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "顺序查找长度为n的线性表的平均查找长度为（）。",
+    "options": [
+      { "key": "A", "text": "n" },
+      { "key": "B", "text": "n/2" },
+      { "key": "C", "text": "(n-1)/2" },
+      { "key": "D", "text": "(n+1)/2" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "在长度为n的顺序表任意位置插入元素，平均需要移动（ ）个元素",
+    "options": [
+      { "key": "A", "text": "n" },
+      { "key": "B", "text": "n/2" },
+      { "key": "C", "text": "n+1" },
+      { "key": "D", "text": "2*n" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "某线性表采用顺序存储结构，每个元素占4个存储单元，首地址为100，则第12个元素的存储地址为（）。",
+    "options": [
+      { "key": "A", "text": "144" },
+      { "key": "B", "text": "145" },
+      { "key": "C", "text": "147" },
+      { "key": "D", "text": "148" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "若长度为n的线性表采用顺序存储结构，那么删除它的第i个数据元素之前，需要它依次向前移动（）个数据元素。",
+    "options": [
+      { "key": "A", "text": "n-i" },
+      { "key": "B", "text": "n+i" },
+      { "key": "C", "text": "n-i-1" },
+      { "key": "D", "text": "n-i+1" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "若长度为n的线性表采用顺序结构，在第i个数据元素之前插入一个元素，需要它依次向后移动（）个元素。",
+    "options": [
+      { "key": "A", "text": "n-i" },
+      { "key": "B", "text": "n-i+1" },
+      { "key": "C", "text": "n-i-1" },
+      { "key": "D", "text": "i" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "线性表L=(a1, a2, ..., an)用一维数组表示，假定删除线性表中任一元素的概率相同（都为1/n），则删除一个元素平均需要移动元素的个数是（）。",
+    "options": [
+      { "key": "A", "text": "n/2" },
+      { "key": "B", "text": "(n+1)/2" },
+      { "key": "C", "text": "(n-1)/2" },
+      { "key": "D", "text": "n" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "阅读下列程序，其功能是（）。\ntypedef struct {\n  ElemType *list;\n  int size;\n  int MaxSize;\n} SeqList;\nvoid fun1(SeqList &L) {\n  int i, j;\n  ElemType temp;\n  for (i=0, j=L.size-1; i<j; i++, j--) {\n    temp = L.list[i];\n    L.list[i] = L.list[j];\n    L.list[j] = temp;\n  }\n}",
+    "options": [
+      { "key": "A", "text": "将顺序表原地逆置" },
+      { "key": "B", "text": "将链表原地逆置" },
+      { "key": "C", "text": "将顺序表首尾元素对换" },
+      { "key": "D", "text": "将链表首尾元素对换" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "已知线性表中的元素以值递增有序排列，阅读下列程序，该算法的功能是（）。\nvoid fun3(SeqList &L, ElemType min, ElemType max){\n  int i=0, j, k, d;\n  while(i<L.size && L.list[i]<=min) i++;\n  j=i;\n  while(j<L.size && L.list[j]<max) j++;\n  d=j-i;\n  if(d==0) return;\n  for(k=j; k<L.size; k++) L.list[k-d]=L.list[k];\n  L.size = L.size-d;\n}",
+    "options": [
+      { "key": "A", "text": "删除顺序表中所有值小于min或大于max的元素" },
+      { "key": "B", "text": "将顺序表中值大于min且小于max的元素向前移动" },
+      { "key": "C", "text": "将顺序表中值大于max的元素向前移动min个位置" },
+      { "key": "D", "text": "删除顺序表中所有值大于min且小于max的元素" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "已知A、B和C为3个元素递增有序的顺序表，且同一个表中元素值各不相同，下列算法对A做如下操作：删除那些既在表B又在表C中出现的元素。请将该算法补充完整。空缺行为：_______________",
+    "options": [
+      { "key": "A", "text": "A.list[m]=A.list[m-1]; m++;" },
+      { "key": "B", "text": "A.list[m-1]=A.list[m]; m++;" },
+      { "key": "C", "text": "A.list[m++]=A.list[k++];" },
+      { "key": "D", "text": "A.list[m++]=A.list[j++];" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "(neuDS)一个顺序表所占用的存储空间大小与( )无关。",
+    "options": [
+      { "key": "A", "text": "表的长度" },
+      { "key": "B", "text": "元素的类型" },
+      { "key": "C", "text": "元素的存放顺序" },
+      { "key": "D", "text": "元素中各字段的类型" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  }
+]

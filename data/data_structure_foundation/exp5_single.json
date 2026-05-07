@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "设有一个双向循环链表并带访问频度域freq，查找成功后需按频度非递增重排。算法locate_DList中的空缺“将p结点插在q结点后”应补为：",
+    "options": [
+      { "key": "A", "text": "p->left=q; p->right=q->right;" },
+      { "key": "B", "text": "p->left=q; q->right=p;" },
+      { "key": "C", "text": "p->left=q; p->right=q->right; q->right->left=p; q->right=p;" },
+      { "key": "D", "text": "p->left=q; q->right=p; p->right=q->right; q->right->left=p;" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "如果对线性表的运算只有删除第一个、删除最后一个、首前插入、尾后插入，则最好使用（）。",
+    "options": [
+      { "key": "A", "text": "只有表尾指针没有表头指针的循环单链表" },
+      { "key": "B", "text": "只有表尾指针没有表头指针的非循环双链表" },
+      { "key": "C", "text": "只有表头指针没有表尾指针的循环双链表" },
+      { "key": "D", "text": "既有表头指针也有表尾指针的循环单链表" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "如果对线性表的运算只有删除第一个元素、在最后一个元素后插入新元素，则最好使用（）。",
+    "options": [
+      { "key": "A", "text": "只有表头指针没有表尾指针的循环单链表" },
+      { "key": "B", "text": "只有表尾指针没有表头指针的循环单链表" },
+      { "key": "C", "text": "非循环双链表" },
+      { "key": "D", "text": "循环双链表" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "设有两个长度为n的单链表，一个非循环一个循环，则（）。",
+    "options": [
+      { "key": "A", "text": "删除第一个结点操作时间复杂度都为O(1)" },
+      { "key": "B", "text": "删除最后一个结点操作时间复杂度都为O(n)" },
+      { "key": "C", "text": "循环链表比非循环链表占用更多内存" },
+      { "key": "D", "text": "h1和h2是不同类型变量" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "在长度为n的（）上，删除第一个元素，其算法时间复杂度为O(n)。",
+    "options": [
+      { "key": "A", "text": "只有表头指针的不带表头结点的循环单链表" },
+      { "key": "B", "text": "只有表尾指针的不带表头结点的循环单链表" },
+      { "key": "C", "text": "只有表尾指针的带表头结点的循环单链表" },
+      { "key": "D", "text": "只有表头指针的带表头结点的循环单链表" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "从一个具有n个结点的有序单链表中查找值等于x的结点，查找成功时平均比较（ ）个结点。",
+    "options": [
+      { "key": "A", "text": "n" },
+      { "key": "B", "text": "n/2" },
+      { "key": "C", "text": "(n-1)/2" },
+      { "key": "D", "text": "(n+1)/2" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "已知头元素为c的单链表，现将f存放于1014H并插入到b和e之间，则b、e、f的链接地址依次为：",
+    "images": [
+      {
+        "src": "images/pta/exp5-q7.png",
+        "alt": "内存存储状态图"
+      }
+    ],
+    "options": [
+      { "key": "A", "text": "1014H, 1004H, 100CH" },
+      { "key": "B", "text": "1014H, 100CH, 1000H" },
+      { "key": "C", "text": "100CH, 1014H, 1004H" },
+      { "key": "D", "text": "100CH, 1004H, 1014H" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "在一个单链表中，已知f结点，若在f后插入r结点，则须执行( ).",
+    "options": [
+      { "key": "A", "text": "r->next=f->next; f->next=r;" },
+      { "key": "B", "text": "f->next=r; r->next=f;" },
+      { "key": "C", "text": "f->next=r->next; r->next=f;" },
+      { "key": "D", "text": "r->next=f; f->next=r->next" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "双向链表中在结点p后插入新结点s，已执行s->next=p->next; p->next=s; 后还需执行：",
+    "images": [
+      {
+        "src": "images/pta/exp5-q9.jpg",
+        "alt": "双向链表结点结构图"
+      }
+    ],
+    "options": [
+      { "key": "A", "text": "s->next->prev = p; s->prev = p;" },
+      { "key": "B", "text": "p->next->prev = s; s->prev = p;" },
+      { "key": "C", "text": "s->prev = s->next->prev; s->next->prev = s;" },
+      { "key": "D", "text": "p->next->prev = s->prev; s->next->prev = p;" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "采用多项式非零项链式存储表示法，若两个多项式非零项个数为N1和N2，则实现两多项式相乘时间复杂度是：",
+    "options": [
+      { "key": "A", "text": "O(N1*N2)" },
+      { "key": "B", "text": "O(M1*M2)" },
+      { "key": "C", "text": "O(N1+N2)" },
+      { "key": "D", "text": "O(M1+M2)" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "若某线性表最常用操作是随机存取与表尾插删，则最节省时间的存储方式是？",
+    "options": [
+      { "key": "A", "text": "双链表" },
+      { "key": "B", "text": "单循环链表" },
+      { "key": "C", "text": "带头结点的双循环链表" },
+      { "key": "D", "text": "顺序表" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "与单链表相比，双链表的优点之一是（）。",
+    "options": [
+      { "key": "A", "text": "插入、删除操作更加简单" },
+      { "key": "B", "text": "可随机访问" },
+      { "key": "C", "text": "可以省略表头指针或表尾指针" },
+      { "key": "D", "text": "顺序访问相邻结点更加灵活" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "带表头附加结点表示线性表的最主要好处是（）。",
+    "options": [
+      { "key": "A", "text": "可以加快对表的遍历" },
+      { "key": "B", "text": "使空表和非空表的处理统一" },
+      { "key": "C", "text": "节省存储空间" },
+      { "key": "D", "text": "可以提高存取表元素的速度" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "以下关于链式存储结构的叙述中，不正确的是（）。",
+    "options": [
+      { "key": "A", "text": "结点含指针域，存储密度小于顺序存储结构" },
+      { "key": "B", "text": "逻辑相邻结点物理上不必邻接" },
+      { "key": "C", "text": "可以通过计算直接确定第i个结点的存储地址" },
+      { "key": "D", "text": "插入、删除操作方便，不必移动结点" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "在头指针为head且表长大于1的单向循环链表中，若p->next->next==head，则（）。",
+    "options": [
+      { "key": "A", "text": "p指向头结点" },
+      { "key": "B", "text": "p指向尾结点" },
+      { "key": "C", "text": "*p的直接后继是头结点" },
+      { "key": "D", "text": "*p的直接后继是尾结点" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "将长度为n的单链表链接在长度为m的单链表之后的算法时间复杂度为（）。",
+    "options": [
+      { "key": "A", "text": "O(1)" },
+      { "key": "B", "text": "O(n)" },
+      { "key": "C", "text": "O(m)" },
+      { "key": "D", "text": "O(m+n)" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  }
+]

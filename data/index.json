@@ -25,6 +25,26 @@
             "files": [
                 "Histology_Embryology_quiz.json"
             ]
+        },
+        {
+            "id": "data-structure-foundation",
+            "name": "数据结构基础",
+            "contributor": "COOKIE9",
+            "files": [
+                "data_structure_foundation/exp1_single.json",
+                "data_structure_foundation/exp2_tf.json",
+                "data_structure_foundation/exp2_single.json",
+                "data_structure_foundation/exp3_tf.json",
+                "data_structure_foundation/exp3_single.json",
+                "data_structure_foundation/exp4_tf.json",
+                "data_structure_foundation/exp4_single.json",
+                "data_structure_foundation/exp5_tf.json",
+                "data_structure_foundation/exp5_single.json",
+                "data_structure_foundation/exp6_tf.json",
+                "data_structure_foundation/exp6_single.json",
+                "data_structure_foundation/exp7_tf.json",
+                "data_structure_foundation/exp7_single.json"
+            ]
         }
     ]
 }

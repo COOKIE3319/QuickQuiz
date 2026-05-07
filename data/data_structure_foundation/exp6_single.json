@@ -1,0 +1,236 @@
+[
+  {
+    "id": 1,
+    "type": "single",
+    "text": "一个栈的入栈序列是a,b,c,d,e，则出栈序列不可能是( )。",
+    "options": [
+      { "key": "A", "text": "e,d,c,b,a" },
+      { "key": "B", "text": "d,e,c,b,a" },
+      { "key": "C", "text": "d,c,e,a,b" },
+      { "key": "D", "text": "a,b,c,d,e" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "single",
+    "text": "若已知一个进栈序列是1,2,3,……,n,其输出序列是p1,p2,p3,……pn, 若p1=n, 则pi(1<i<n)为( )。",
+    "options": [
+      { "key": "A", "text": "i" },
+      { "key": "B", "text": "n-i" },
+      { "key": "C", "text": "n-i+1" },
+      { "key": "D", "text": "不确定" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "single",
+    "text": "设栈s的初始状态为空,6个元素的入栈顺序为e1,e2,e3,e4,e5和e6。若出栈的顺序是e2,e4, e3,e6,e5,e1,则栈s的容量至少应该是( )。",
+    "options": [
+      { "key": "A", "text": "6" },
+      { "key": "B", "text": "4" },
+      { "key": "C", "text": "3" },
+      { "key": "D", "text": "2" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "single",
+    "text": "栈的插入和删除操作在（ ）进行。",
+    "options": [
+      { "key": "A", "text": "栈顶" },
+      { "key": "B", "text": "栈底" },
+      { "key": "C", "text": "任意位置" },
+      { "key": "D", "text": "指定位置" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "single",
+    "text": "若栈采用顺序存储方式存储，现两栈共享空间V[1..m]，top[i]代表第i个栈(i=1,2)栈顶元素所在的下标，栈1的底在V[1]，栈2的底在V[m]，则栈满的条件是（ ）。",
+    "options": [
+      { "key": "A", "text": "|top[2]-top[1]|=0" },
+      { "key": "B", "text": "top[1]+1=top[2]" },
+      { "key": "C", "text": "top[1]+top[2]=m" },
+      { "key": "D", "text": "top[1]=top[2]" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "single",
+    "text": "和顺序栈相比，链栈有一个比较明显的优势是（）。",
+    "options": [
+      { "key": "A", "text": "通常不会出现栈满的情况" },
+      { "key": "B", "text": "通常不会出现栈空的情况" },
+      { "key": "C", "text": "插入操作更容易实现" },
+      { "key": "D", "text": "删除操作更容易实现" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 7,
+    "type": "single",
+    "text": "Push and pop { 23, 17, 13, 53, 11, 7, 29 } sequentially into then out of a stack. Suppose that each number is pushed into a queue right after it gets out of the stack, and the dequeue sequence is { 23, 13, 7, 11, 53, 29, 17 }. If both the stack and the queue are initially empty, then the minimum size of the stack must be:",
+    "options": [
+      { "key": "A", "text": "2" },
+      { "key": "B", "text": "3" },
+      { "key": "C", "text": "4" },
+      { "key": "D", "text": "5" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 8,
+    "type": "single",
+    "text": "以S和X分别表示进栈和退栈操作，则对初始状态为空的栈可以进行的栈操作系列是（ ）",
+    "options": [
+      { "key": "A", "text": "SXSSXXXX" },
+      { "key": "B", "text": "SXXSXSSX" },
+      { "key": "C", "text": "SXSXXSSX" },
+      { "key": "D", "text": "SSSXXSXX" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 9,
+    "type": "single",
+    "text": "Push 4 characters opop onto a stack. In how many different ways that we can pop these characters and still obtain opop?",
+    "options": [
+      { "key": "A", "text": "5" },
+      { "key": "B", "text": "4" },
+      { "key": "C", "text": "3" },
+      { "key": "D", "text": "6" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 10,
+    "type": "single",
+    "text": "顺序栈栈底到栈顶的元素依次为A,B,C,D。以下（ ）操作序列可以完成只删除元素B，其他元素仍然在栈中。",
+    "options": [
+      { "key": "A", "text": "出栈 出栈 出栈 入栈 入栈" },
+      { "key": "B", "text": "出栈 出栈 入栈 出栈 出栈" },
+      { "key": "C", "text": "入栈 出栈 出栈 入栈 出栈" },
+      { "key": "D", "text": "出栈 出栈 出栈 出栈 入栈" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 11,
+    "type": "single",
+    "text": "若让元素1，2，3，4，5依次进栈，则出栈次序不可能出现在（ ）种情况。",
+    "options": [
+      { "key": "A", "text": "5，4，3，2，1" },
+      { "key": "B", "text": "2，1，5，4，3" },
+      { "key": "C", "text": "4，3，1，2，5" },
+      { "key": "D", "text": "2，3，5，4，1" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 12,
+    "type": "single",
+    "text": "如果条件top==-1表示栈空，那么条件______表示栈满。",
+    "options": [
+      { "key": "A", "text": "top==M" },
+      { "key": "B", "text": "top>M" },
+      { "key": "C", "text": "top==M-1" },
+      { "key": "D", "text": "top==M+1" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 13,
+    "type": "single",
+    "text": "若元素 1、2、3、4、5 依次入栈，则出栈次序可能为 ▁▁▁▁▁ 。",
+    "options": [
+      { "key": "A", "text": "3, 2, 5, 1, 4" },
+      { "key": "B", "text": "2, 1, 5, 3, 4" },
+      { "key": "C", "text": "4, 5, 3, 2, 1" },
+      { "key": "D", "text": "1, 5, 2, 4, 3" }
+    ],
+    "answer": ["C"],
+    "score": 1
+  },
+  {
+    "id": 14,
+    "type": "single",
+    "text": "栈的插入在 ▁▁▁▁▁ 进行，删除在 ▁▁▁▁▁ 进行。",
+    "options": [
+      { "key": "A", "text": "栈顶、栈顶" },
+      { "key": "B", "text": "栈底、栈底" },
+      { "key": "C", "text": "栈顶、栈底" },
+      { "key": "D", "text": "栈底、栈顶" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 15,
+    "type": "single",
+    "text": "Suppose that we are using a stack to convert the infix expression ((A + B) - C * (D / E)) + F to the postfix expression. What is the maximum number of operators in the stack during conversion?",
+    "options": [
+      { "key": "A", "text": "2" },
+      { "key": "B", "text": "3" },
+      { "key": "C", "text": "4" },
+      { "key": "D", "text": "5" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  },
+  {
+    "id": 16,
+    "type": "single",
+    "text": "Push and pop { 1, 2, 3, 4, 5, 6, 7 } sequentially into then out of a stack. Suppose that each number is pushed into a queue right after it gets out of the stack, which of the following dequeue sequences is possible? Note: making 4 consecutive pops are NOT allowed in this stack.",
+    "options": [
+      { "key": "A", "text": "2, 6, 5, 4, 7, 3, 1" },
+      { "key": "B", "text": "1, 2, 3, 6, 7, 4, 5" },
+      { "key": "C", "text": "3, 6, 5, 4, 7, 1, 2" },
+      { "key": "D", "text": "1, 4, 7, 6, 5, 3, 2" }
+    ],
+    "answer": ["A"],
+    "score": 1
+  },
+  {
+    "id": 17,
+    "type": "single",
+    "text": "有3个不同元素依次进栈，能得到（ ）种不同的出栈序列。",
+    "options": [
+      { "key": "A", "text": "4" },
+      { "key": "B", "text": "5" },
+      { "key": "C", "text": "6" },
+      { "key": "D", "text": "7" }
+    ],
+    "answer": ["B"],
+    "score": 1
+  },
+  {
+    "id": 18,
+    "type": "single",
+    "text": "一个顺序栈的定义如下：struct Stack{ // 顺序栈结构体 int *data; // 栈元素数组首地址 int top; // top下标 int capacity; // 栈容量（数组的长度） } st; 假设我们将栈底设在栈元素数组下标小的那一端，且top是栈顶元素上方（即下标增加的方向）与栈顶元素相邻的数组存储空间的下标，则判断栈满（即栈元素占据数组全部存储空间）的条件应当是：",
+    "options": [
+      { "key": "A", "text": "st.top == -1" },
+      { "key": "B", "text": "st.top == 0" },
+      { "key": "C", "text": "st.top == st.capacity - 1" },
+      { "key": "D", "text": "st.top == st.capacity" }
+    ],
+    "answer": ["D"],
+    "score": 1
+  }
+]

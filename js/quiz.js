@@ -160,6 +160,7 @@ export function renderQuestion() {
 
     els.statusBar.textContent = `题目 ${STATE.index + 1} / ${STATE.questions.length} | 得分: ${STATE.score}`;
     els.questionText.textContent = q.text;
+    renderQuestionMedia(q);
     els.optionsList.innerHTML = '';
     els.feedback.style.display = 'none';
     els.submitBtn.style.display = q.type === 'multiple' ? 'block' : 'none';
@@ -197,6 +198,50 @@ export function renderQuestion() {
         };
         els.optionsList.appendChild(li);
     });
+}
+
+// 图片支持
+function renderQuestionMedia(question) {
+    if (!els.questionMedia) return;
+
+    const media = [];
+
+    if (Array.isArray(question.images)) {
+        question.images.forEach(item => {
+            if (typeof item === 'string') {
+                media.push({ src: item, alt: '题目配图' });
+            } else if (item && item.src) {
+                media.push({ src: item.src, alt: item.alt || '题目配图' });
+            }
+        });
+    }
+
+    if (typeof question.image === 'string') {
+        media.push({ src: question.image, alt: '题目配图' });
+    } else if (question.image && question.image.src) {
+        media.push({ src: question.image.src, alt: question.image.alt || '题目配图' });
+    }
+
+    if (typeof question.imageUrl === 'string') {
+        media.push({ src: question.imageUrl, alt: '题目配图' });
+    }
+
+    els.questionMedia.innerHTML = '';
+    if (media.length === 0) {
+        els.questionMedia.classList.remove('has-media');
+        return;
+    }
+
+    media.forEach(item => {
+        const img = document.createElement('img');
+        img.src = item.src;
+        img.alt = item.alt;
+        img.loading = 'lazy';
+        img.referrerPolicy = 'no-referrer';
+        els.questionMedia.appendChild(img);
+    });
+
+    els.questionMedia.classList.add('has-media');
 }
 
 export function checkAnswer() {

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "type": "tf",
+    "text": "(neuDS)在线性表的顺序存储结构中可实现快速的随机存取，而在链式存储结构中则只能进行顺序存取。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 2,
+    "type": "tf",
+    "text": "取线性表的第i个元素的时间同i的大小有关。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 3,
+    "type": "tf",
+    "text": "在一个设有头指针和尾指针的单链表中，执行删除该单链表中最后一个元素的操作与链表的长度无关。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 4,
+    "type": "tf",
+    "text": "在带头结点的非空单链表中，头结点的存储位置由前驱结点指示。",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  },
+  {
+    "id": 5,
+    "type": "tf",
+    "text": "The time complexity of Selection Sort will be the same no matter we store the elements in an array or a linked list.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["T"],
+    "score": 1
+  },
+  {
+    "id": 6,
+    "type": "tf",
+    "text": "The time complexity of Binary Search will be the same no matter we store the elements in an array or a linked list.",
+    "options": [
+      { "key": "T", "text": "正确" },
+      { "key": "F", "text": "错误" }
+    ],
+    "answer": ["F"],
+    "score": 1
+  }
+]
