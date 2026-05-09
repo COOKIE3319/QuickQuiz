@@ -473,6 +473,40 @@ nav {
     margin-top: 20px;
 }
 
+.progress-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.38);
+}
+
+.progress-modal-card {
+    width: min(420px, 100%);
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: var(--surface-strong);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.progress-modal-card h2 {
+    color: var(--text);
+    font-size: 1.15rem;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.progress-modal-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 24px;
+}
+
 button {
     padding: 12px 24px;
     border-radius: 12px;

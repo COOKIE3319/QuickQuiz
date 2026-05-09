@@ -34,6 +34,7 @@ export const els = {
     feedback: document.getElementById('feedback'),
     submitBtn: document.getElementById('submit-btn'),
     nextBtn: document.getElementById('next-btn'),
+    prevBtn: document.getElementById('prev-btn'),
     resetBtn: document.getElementById('reset-btn'),
     endBtn: document.getElementById('end-btn'),
     backBtn: document.getElementById('back-btn'),

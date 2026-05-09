@@ -1,18 +1,19 @@
 import { STATE, els } from './state.js';
 import { initTheme } from './theme.js';
-import { loadSubjects, applySelection, resetQuiz, checkAnswer, nextQuestion, exitSubject, showContribute } from './quiz.js';
+import { loadSubjects, applySelection, resetQuiz, checkAnswer, nextQuestion, prevQuestion, exitSubject, showContribute } from './quiz.js';
 import { showStats } from './stats.js';
 
 function bindEvents() {
-    els.setSelect.addEventListener('change', applySelection);
+    els.setSelect.addEventListener('change', () => applySelection());
     
     els.randomToggle.addEventListener('change', (e) => {
         STATE.randomNext = e.target.checked;
-        applySelection(); // 重新排序
+        applySelection({ clearProgress: true, promptForSavedProgress: false }); // 重新排序
     });
 
     els.submitBtn.addEventListener('click', checkAnswer);
     els.nextBtn.addEventListener('click', nextQuestion);
+    els.prevBtn.addEventListener('click', prevQuestion);
     els.resetBtn.addEventListener('click', resetQuiz);
     els.endBtn.addEventListener('click', showStats);
     els.backBtn.addEventListener('click', resetQuiz);

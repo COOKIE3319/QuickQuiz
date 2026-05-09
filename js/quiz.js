@@ -1,4 +1,5 @@
 import { STATE, els } from './state.js';
+import { clearSavedProgress, hasUnfinishedProgress, loadSavedProgress, saveProgress, restoreProgress } from './progress.js';
 
 export async function loadSubjects() {
     try {
@@ -57,7 +58,7 @@ export async function selectSubject(subjectId) {
     }
     STATE.sets = sets;
     populateSetSelect();
-    applySelection();
+    await applySelection();
 }
 
 export function exitSubject() {
@@ -126,7 +127,11 @@ function populateSetSelect() {
     });
 }
 
-export function applySelection() {
+export async function applySelection(options = {}) {
+    if (!options || options instanceof Event) {
+        options = {};
+    }
+
     const setId = els.setSelect.value;
     STATE.selectedSetId = setId;
     
@@ -150,10 +155,25 @@ export function applySelection() {
         }] : [];
     }
 
-    resetQuiz();
+    resetQuiz({ clearProgress: Boolean(options.clearProgress) });
+
+    if (options.promptForSavedProgress === false) return;
+
+    const savedProgress = loadSavedProgress();
+    if (!hasUnfinishedProgress(savedProgress)) return;
+
+    const shouldRestore = await askToRestoreProgress();
+    if (shouldRestore && restoreProgress(savedProgress)) {
+        renderRestoredProgress(savedProgress);
+        return;
+    }
+
+    clearSavedProgress();
 }
 
-export function resetQuiz() {
+export function resetQuiz(options = {}) {
+    const shouldClearProgress = options.clearProgress !== false;
+
     clearAdvanceTimer();
     STATE.index = 0;
     STATE.score = 0;
@@ -167,6 +187,62 @@ export function resetQuiz() {
     els.questionCard.style.display = 'block';
     renderAnsweredList();
     renderQuestion();
+
+    if (shouldClearProgress) {
+        clearSavedProgress();
+    }
+}
+
+function renderRestoredProgress(progress) {
+    els.statsCard.style.display = progress.view === 'stats' ? 'block' : 'none';
+    els.questionCard.style.display = progress.view === 'stats' ? 'none' : 'block';
+
+    if (progress.view === 'stats') {
+        renderAnsweredList();
+        import('./stats.js').then(m => m.showStats());
+        return;
+    }
+
+    renderAnsweredList();
+    renderQuestion();
+    saveProgress();
+}
+
+function askToRestoreProgress() {
+    return new Promise(resolve => {
+        const modal = document.createElement('div');
+        modal.className = 'progress-modal';
+        modal.setAttribute('role', 'dialog');
+        modal.setAttribute('aria-modal', 'true');
+        modal.setAttribute('aria-labelledby', 'progress-modal-title');
+        modal.innerHTML = `
+            <div class="progress-modal-card">
+                <h2 id="progress-modal-title">有未完成的作答记录，是否恢复</h2>
+                <div class="progress-modal-actions">
+                    <button class="btn-secondary" type="button" data-action="cancel">取消</button>
+                    <button class="btn-primary" type="button" data-action="restore">恢复</button>
+                </div>
+            </div>
+        `;
+
+        const close = shouldRestore => {
+            modal.remove();
+            document.body.classList.remove('lock-scroll');
+            resolve(shouldRestore);
+        };
+
+        modal.querySelector('[data-action="restore"]').addEventListener('click', () => close(true));
+        modal.querySelector('[data-action="cancel"]').addEventListener('click', () => close(false));
+        modal.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                close(false);
+            }
+        });
+
+        document.body.appendChild(modal);
+        document.body.classList.add('lock-scroll');
+        modal.querySelector('[data-action="restore"]').focus();
+    });
 }
 
 export function renderQuestion() {
@@ -195,6 +271,7 @@ export function renderQuestion() {
     els.submitBtn.style.display = q.type === 'multiple' ? 'block' : 'none';
     els.submitBtn.disabled = true;
     els.nextBtn.style.display = 'none';
+    els.prevBtn.disabled = STATE.index === 0;
 
     q.options.forEach(opt => {
         const li = document.createElement('li');
@@ -340,6 +417,7 @@ export function checkAnswer() {
     
     els.submitBtn.disabled = true;
     els.statusBar.textContent = `题目 ${STATE.index + 1} / ${STATE.questions.length} | 得分: ${STATE.score}`;
+    saveProgress();
 }
 
 export function renderAnsweredList() {
@@ -402,6 +480,7 @@ export function jumpToQuestion(questionIndex) {
     els.statsCard.style.display = 'none';
     els.questionCard.style.display = 'block';
     renderQuestion();
+    saveProgress();
 }
 
 export function nextQuestion() {
@@ -412,7 +491,18 @@ export function nextQuestion() {
         import('./stats.js').then(m => m.showStats());
     } else {
         renderQuestion();
+        saveProgress();
     }
+}
+
+export function prevQuestion() {
+    clearAdvanceTimer();
+
+    if (STATE.index === 0) return;
+
+    STATE.index--;
+    renderQuestion();
+    saveProgress();
 }
 
 function clearAdvanceTimer() {

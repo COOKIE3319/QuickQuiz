@@ -1,4 +1,5 @@
 import { STATE, els } from './state.js';
+import { saveProgress } from './progress.js';
 
 export function showStats() {
     els.questionCard.style.display = 'none';
@@ -13,6 +14,7 @@ export function showStats() {
     els.scoreCount.textContent = `${correctCount} / ${answeredCount} (得分: ${STATE.score} | 总题量: ${totalCount})`;
 
     renderWrongList();
+    saveProgress('stats');
 }
 
 function renderWrongList() {
