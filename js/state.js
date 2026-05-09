@@ -2,6 +2,7 @@ export const STATE = {
     subjects: [],
     sets: [],
     questions: [],
+    questionGroups: [],
     order: [],
     index: 0,
     score: 0,
@@ -10,7 +11,8 @@ export const STATE = {
     selectedSubjectId: null,
     selectedSetId: 'all',
     randomNext: false,
-    isAnswered: false
+    isAnswered: false,
+    advanceTimer: null
 };
 
 export const els = {
@@ -32,6 +34,7 @@ export const els = {
     feedback: document.getElementById('feedback'),
     submitBtn: document.getElementById('submit-btn'),
     nextBtn: document.getElementById('next-btn'),
+    prevBtn: document.getElementById('prev-btn'),
     resetBtn: document.getElementById('reset-btn'),
     endBtn: document.getElementById('end-btn'),
     backBtn: document.getElementById('back-btn'),
@@ -46,5 +49,9 @@ export const els = {
     wrongList: document.getElementById('wrong-list'),
     currentSubjectName: document.getElementById('current-subject-name'),
     quizControls: document.getElementById('quiz-controls'),
-    randomControls: document.getElementById('random-controls')
+    randomControls: document.getElementById('random-controls'),
+    answeredPanel: document.getElementById('answered-panel'),
+    answeredToggle: document.getElementById('answered-toggle'),
+    answeredList: document.getElementById('answered-list'),
+    answeredCount: document.getElementById('answered-count')
 };

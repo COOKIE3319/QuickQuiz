@@ -1,4 +1,5 @@
 import { STATE, els } from './state.js';
+import { saveProgress } from './progress.js';
 
 export function showStats() {
     els.questionCard.style.display = 'none';
@@ -13,6 +14,7 @@ export function showStats() {
     els.scoreCount.textContent = `${correctCount} / ${answeredCount} (得分: ${STATE.score} | 总题量: ${totalCount})`;
 
     renderWrongList();
+    saveProgress('stats');
 }
 
 function renderWrongList() {
@@ -25,12 +27,12 @@ function renderWrongList() {
     }
 
     wrongs.forEach(res => {
-        const q = STATE.questions.find(q => q.id === res.questionId);
+        const q = STATE.questions[res.questionIndex] || STATE.questions.find(q => q.id === res.questionId);
         const item = document.createElement('div');
         item.className = 'wrong-item';
         item.innerHTML = `
-            <div class="wrong-text">${q.text}</div>
-            <div class="wrong-answer">正确答案: ${q.answer.join(', ')} | 你的回答: ${res.userAnswer.join(', ') || '无'}</div>
+            <div class="wrong-text">${q?.text || '题目已不可用'}</div>
+            <div class="wrong-answer">正确答案: ${q?.answer?.join(', ') || '无'} | 你的回答: ${res.userAnswer.join(', ') || '无'}</div>
         `;
         els.wrongList.appendChild(item);
     });
